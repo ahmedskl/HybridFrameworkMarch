@@ -12,4 +12,8 @@ public class CreateCourse extends BaseClass
 	{
 		
 	}
+	public void test3()
+	{
+		
+	}
 }
