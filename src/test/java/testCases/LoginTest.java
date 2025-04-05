@@ -8,8 +8,8 @@ import dataProvider.CustomDataProvider;
 import pages.HomePage;
 import pages.LoginPage;
 
-public class LoginTest extends BaseClass{
-
+public class LoginTest extends BaseClass
+{
 
 	@Test(dataProvider = "loginDetails", dataProviderClass = CustomDataProvider.class)
 	public void loginToApplication(String uname, String pass)

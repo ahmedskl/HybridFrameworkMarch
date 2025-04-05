@@ -1,5 +1,6 @@
 package browserFactory;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -43,13 +44,13 @@ public class BrowserFactory {
 		}
 
 		driver.manage().window().maximize();
-//		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));//4.27.0,4.13.0
-//		driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(20));//4.27.0,4.13.0
-		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-		driver.manage().timeouts().setScriptTimeout(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));//4.27.0,4.13.0
+		driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(20));//4.27.0,4.13.0
+//		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+//		driver.manage().timeouts().setScriptTimeout(20, TimeUnit.SECONDS);
 		driver.get(applicationUrl);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); //4.27.0,4.13.0jar
+//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); //4.27.0,4.13.0jar
 
 		return driver;
 	}

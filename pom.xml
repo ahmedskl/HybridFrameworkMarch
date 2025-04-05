@@ -38,12 +38,6 @@
 	    <artifactId>webdrivermanager</artifactId>
 	    <version>5.7.0</version>
 	</dependency>
-	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-devtools-v133 -->
-	<dependency>
-	    <groupId>org.seleniumhq.selenium</groupId>
-	    <artifactId>selenium-devtools-v133</artifactId>
-	    <version>4.31.0</version>
-	</dependency>
 	
  </dependencies>
 

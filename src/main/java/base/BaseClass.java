@@ -9,6 +9,7 @@ import org.testng.annotations.Parameters;
 import browserFactory.BrowserFactory;
 import dataProvider.ConfigReader;
 
+
 public class BaseClass {
 
 	public WebDriver driver;
@@ -20,10 +21,10 @@ public class BaseClass {
 		System.out.println("LOG:INFO - Setting up browser");
 		//driver = BrowserFactory.startBrowser("Chrome", "https://ineuron-courses.vercel.app/login");
 
-//1st Approch when u take from Config - this doesn't suite for cross browser, coz in cross browser u keep passing the browsers.
-// 2nd Approch instead of taking from config we take from XML and runtime parameter.
+		//1st Approch when u take from Config - this doesn't suite for cross browser, coz in cross browser u keep passing the browsers.
+		// 2nd Approch instead of taking from config we take from XML and runtime parameter.
+//		driver = BrowserFactory.startBrowser(ConfigReader.getProperty("browser"), ConfigReader.getProperty("URL"));
 		driver = BrowserFactory.startBrowser(ConfigReader.getProperty("browser"), ConfigReader.getProperty("URL"));
-
 		System.out.println("LOG:INFO - Application up and running");
 	}
 
@@ -31,13 +32,13 @@ public class BaseClass {
 	public void closeBrowser()
 	{
 		driver.quit();
-		System.out.println("LOG:INFO - Closing the browser and application");
+		System.out.println("LOG:INFO - Closing the browser");
 	}
 	@BeforeSuite
 	public void setupDB()
 	{
 		
-		System.out.println("LOG:INFO - Closing the browser and application");
+		System.out.println("LOG:INFO - Initializing the browser and application");
 	}
 
 

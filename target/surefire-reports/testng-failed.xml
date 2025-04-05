@@ -9,7 +9,8 @@
       <class name="testCases.LoginTest">
         <methods>
           <include name="setupBrowser"/>
-          <include name="loginToApplication" invocation-numbers="1"/>
+          <include name="loginToApplication" invocation-numbers="0 1"/>
+          <include name="setupDB"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- testCases.LoginTest -->
